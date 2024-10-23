@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This repository is a collection of code and data used in IO *TheRa.py Sessions*, the informal series of workshops tailored for the proteomics researcher struggling to take those first steps into data analysis with R (and eventually python...). 
+This repository is a collection of code and data used in IO *TheRa.py Sessions*, the informal series of workshops tailored for the proteomics researcher struggling to take those first steps into data analysis with R (and eventually Python). 
 
 To set up a data analysis environment using R, RStudio, and RTools. Follow the steps below to get started.
 
