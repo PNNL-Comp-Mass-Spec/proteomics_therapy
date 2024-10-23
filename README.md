@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This repository is a collection of code and data used in IO *TheRa.py Sessions*, the informal series of workshops tailored for the proteomics researcher struggling to take those first steps into data analysis with R (and eventually python...). 
+This repository is a collection of code and data used in IO *TheRa.py Sessions*, the informal series of workshops tailored for the proteomics researcher struggling to take those first steps into data analysis with R (and eventually Python). 
 
 To set up a data analysis environment using R, RStudio, and RTools. Follow the steps below to get started.
 
@@ -34,10 +34,13 @@ R is a free software environment for statistical computing and graphics.
 
 ### macOS:
 
-1. Go to the [CRAN R project download page](https://cran.rstudio.com/).
-2. Click on the "Download R for macOS" link.
-3. Click on the link for the "R-<version number>.pkg" file to download the installer.
-4. Open the downloaded `.pkg` file and follow the on-screen instructions to install R.
+1. Follow [this link](https://cran.rstudio.com/bin/macosx/) to the R download page for macOS
+2. Determine the architecure of your Mac's chip. Open System Settings > General > About > Chip.
+   - If your Mac has an Apple chip, click the download link containing `arm64.pkg`.
+   - If your Mac has an Intel chip, click the download link containing `x86_64.pkg`.
+3. If your browser asks if it is okay to download from the current website, allow.
+4. By default the `.pkg` installer will download to your "Downloads" folder; open Finder > Downloads and double click the `.pkg` file you just downloaded.
+5. Follow the on-screen instructions to install R. If your Mac prompts you to allow any permissions, allow.
 
 ## Downloading and Installing RStudio
 
@@ -47,7 +50,12 @@ RStudio is an integrated development environment (IDE) for R that provides a use
 1. Go to the [RStudio download page](https://posit.co/download/rstudio-desktop/).
 2. Under the "2: Install RStudio" section, click the download link for your operating system (Windows or macOS).
    - If the link doesn't match your operating system, scroll down to "All Installers and Tarballs" and select the appropriate version.
-3. Once the installer is downloaded, run it and follow the on-screen instructions.
+3. Install.
+   - On macOS:
+      - Again, the program will, by default, be downloaded to your "Downloads" folder.
+      - Unlike before, this program is downloaded as a `.dmg` file (Disk Image). To install R Studio, double click the `.dmg` file. Then, in the new view that appears, drag the R Studio icon to the "Applications" folder shortcut.
+   - On Windows:
+     - Once the installer is downloaded, run it and follow the on-screen instructions.
 
 ## Compiling Packages from Source
 
@@ -76,11 +84,11 @@ Rtools is a collection of tools necessary for building R packages on Windows.
 
 To compile R packages from source on macOS, you only need to install Xcode Command Line Tools:
 
-1. Open a terminal window.
-   - Click Spotlight search in the top right of your screen, then search for “Terminal”
-2. Copy and paste the following into the terminal, then press enter: `xcode-select --install`
-3. You will probably need to provide your password to enable installing the software.
-4. Follow any onscreen instructions and wait for it to finish.
+1. Open a Terminal window.
+   - You may find this program by clicking the Spotlight Search icon (magnifying glass) in your menu bar, then search for “Terminal”.
+   - Otherwise, it can be found in Finder > Applications > Utilities
+2. Copy and paste the following into the terminal, then press enter: `sudo xcode-select --install`. You may need to input your password. (If so, no characters will appear.)
+3. Follow any onscreen instructions and wait for it to finish.
 
 You can now compile R packages!
 
