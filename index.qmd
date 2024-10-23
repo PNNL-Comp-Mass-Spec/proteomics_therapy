@@ -16,7 +16,7 @@ This is a Quarto book containing the code and content for the Data Analysis *The
 4. To **Render the entire book**, in the terminal enter: `quarto render 
 5. After you can render individual chapters using the **Render** button in RStudio.
 6. Save outputs of longer `r` chunks to save time compiling book. 
-7. The outputs are stored in `_report` folder. 
+7. The outputs are stored in `docs` folder. 
 
 :::
 

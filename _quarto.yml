@@ -1,6 +1,6 @@
 project:
   type: book
-  output-dir: _report
+  output-dir: docs
 
 book:
   title: "IO Group Data Analysis *TheRa.py*"
