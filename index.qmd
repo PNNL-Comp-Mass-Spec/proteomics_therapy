@@ -1,0 +1,22 @@
+# Preface {.unnumbered}
+
+This is a Quarto book containing the code and content for the Data Analysis *TheRapy* Sesssions with PNNL IO's group. See [`proteomics_therapy`](https://github.com/PNNL-Comp-Mass-Spec/proteomics_therapy) GitHub repo for version control of the project. If permitted, data is stored directly on the Repo, otherwise it'll be on DMS. This means reproducing certain sections of code will require you to be on the PNNL network. 
+
+
+::: {.callout-tip collapse="true"}
+
+## Help rendering book
+
+*Note compiling will only work with `.Renviron` `DATA_PATH` pointing to the `data_tujin_urine_ev` onedrive folder on your local machine; see GitHub readme for details*.
+
+1. This is a Quarto book; to learn more about Quarto books visit <https://quarto.org/docs/books>
+2. Each chapter is it's own `.qmd` document; make sure to add it to the `_quarto.yml`
+3. Put all library calls and functions into `_utils.R`; **include** `source("_utils.R")` at the beginning of each chapter to make sure all chapters have the same libraries and functions.
+   - this unfortunately means `_utils.R` is called when every chapter is compiled; increasing the time of global rendering. 
+4. To **Render the entire book**, in the terminal enter: `quarto render 
+5. After you can render individual chapters using the **Render** button in RStudio.
+6. Save outputs of longer `r` chunks to save time compiling book. 
+7. The outputs are stored in `_report` folder. 
+
+:::
+

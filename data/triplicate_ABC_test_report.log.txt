@@ -1,0 +1,344 @@
+DIA-NN 1.9.2 (Data-Independent Acquisition by Neural Networks)
+Compiled on Oct 17 2024 21:58:43
+Current date and time: Tue Oct 22 17:51:45 2024
+CPU: AuthenticAMD AMD EPYC 9354 32-Core Processor
+SIMD instructions: AVX AVX2 AVX512CD AVX512F FMA SSE4.1 SSE4.2 SSE4a 
+Logical CPU cores: 64
+diann.exe --f E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\raw\MNST_Eval_OT2EvotipLoading_A1_30ul_A_EV1107_200SOD_20240922.raw  --f E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\raw\MNST_Eval_OT2EvotipLoading_A4_30ul_B_EV1107_200SOD_20240922.raw  --f E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\raw\MNST_Eval_OT2EvotipLoading_A8_30ul_C_EV1107_200SOD_20240922.raw  --f E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\raw\MNST_Eval_OT2EvotipLoading_B3_30ul_A_EV1107_200SOD_20240922.raw  --f E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\raw\MNST_Eval_OT2EvotipLoading_C2_30ul_B_EV1107_200SOD_20240922.raw  --f E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\raw\MNST_Eval_OT2EvotipLoading_C4_30ul_C_EV1107_200SOD_20240922.raw  --f E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\raw\MNST_Eval_OT2EvotipLoading_C5_30ul_A_EV1107_200SOD_20240922.raw  --f E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\raw\MNST_Eval_OT2EvotipLoading_C12_30ul_B_EV1107_200SOD_20240922.raw  --f E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\raw\MNST_Eval_OT2EvotipLoading_D1_30ul_C_EV1107_200SOD_20240922.raw  --lib E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\initial_speclib_mixed27277entries_report-lib.predicted.speclib --threads 64 --verbose 1 --out E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\test_therapy_session\triplciate_ABC_test_report.tsv --qvalue 0.01 --matrices --out-lib E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\test_therapy_session\triplciate_ABC_test2_report-lib.parquet --gen-spec-lib --unimod4 --reanalyse --relaxed-prot-inf --rt-profiling --pg-level 1 
+
+Thread number set to 64
+Output will be filtered at 0.01 FDR
+Precursor/protein x samples expression level matrices will be saved along with the main report
+A spectral library will be generated
+Cysteine carbamidomethylation enabled as a fixed modification
+A spectral library will be created from the DIA runs and used to reanalyse them; .quant files will only be saved to disk during the first step
+Heuristic protein grouping will be used, to reduce the number of protein groups obtained; this mode is recommended for benchmarking protein ID numbers, GO/pathway and system-scale analyses
+The spectral library (if generated) will retain the original spectra but will include empirically-aligned RTs
+Implicit protein grouping: protein names; this determines which peptides are considered 'proteotypic' and thus affects protein FDR calculation
+DIA-NN will optimise the mass accuracy automatically using the first run in the experiment. This is useful primarily for quick initial analyses, when it is not yet known which mass accuracy setting works best for a particular acquisition scheme.
+WARNING: protein inference is enabled but no FASTA provided - is this intended?
+
+9 files will be processed
+[0:00] Loading spectral library E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\initial_speclib_mixed27277entries_report-lib.predicted.speclib
+[0:09] Library annotated with sequence database(s): D:\Users\hall274\OneDrive - PNNL\dev\data_sandbox\moonshot\ot2_evotiploading\canonical_irt_mouse_yeast_shew_27277entries_2024_09_23.fasta
+[0:09] Protein names missing for some isoforms
+[0:09] Gene names missing for some isoforms
+[0:09] Library contains 27240 proteins, and 22914 genes
+[0:09] Spectral library loaded: 27241 protein isoforms, 34181 protein groups and 3254914 precursors in 1679133 elution groups.
+[0:10] Initialising library
+
+First pass: generating a spectral library from DIA data
+
+[0:20] File #1/9
+[0:20] Loading run E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\raw\MNST_Eval_OT2EvotipLoading_A1_30ul_A_EV1107_200SOD_20240922.raw
+[0:25] 3254914 library precursors are potentially detectable
+[0:27] Calibrating with mass accuracies 30 (MS1), 20 (MS2)
+[0:37] RT window set to 0.250107
+[0:37] Peak width: 2.448
+[0:37] Scan window radius set to 5
+[0:37] Recommended MS1 mass accuracy setting: 16.1069 ppm
+[0:55] Optimised mass accuracy: 14.609 ppm
+[1:22] Removing low confidence identifications
+[1:23] Removing interfering precursors
+[1:28] Training neural networks on 52168 PSMs
+[1:33] Number of IDs at 0.01 FDR: 15306
+[1:35] Calculating protein q-values
+WARNING: 1045 precursors were wrongly annotated in the library as proteotypic
+[1:35] Number of proteins identified at 1% FDR: 3474 (precursor-level), 3050 (protein-level) (inference performed using proteotypic peptides only)
+[1:35] Quantification
+[1:35] Quantification information saved to E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\raw\MNST_Eval_OT2EvotipLoading_A1_30ul_A_EV1107_200SOD_20240922.raw.quant
+
+[1:36] File #2/9
+[1:36] Loading run E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\raw\MNST_Eval_OT2EvotipLoading_A4_30ul_B_EV1107_200SOD_20240922.raw
+[1:44] 3254914 library precursors are potentially detectable
+[1:46] Calibrating with mass accuracies 30 (MS1), 14.609 (MS2)
+[1:57] RT window set to 0.255966
+[1:57] Recommended MS1 mass accuracy setting: 16.8804 ppm
+[2:33] Removing low confidence identifications
+[2:34] Removing interfering precursors
+[2:38] Training neural networks on 48031 PSMs
+[2:41] Number of IDs at 0.01 FDR: 14989
+[2:42] Calculating protein q-values
+WARNING: 1045 precursors were wrongly annotated in the library as proteotypic
+[2:43] Number of proteins identified at 1% FDR: 3370 (precursor-level), 3000 (protein-level) (inference performed using proteotypic peptides only)
+[2:43] Quantification
+[2:43] Quantification information saved to E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\raw\MNST_Eval_OT2EvotipLoading_A4_30ul_B_EV1107_200SOD_20240922.raw.quant
+
+[2:43] File #3/9
+[2:43] Loading run E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\raw\MNST_Eval_OT2EvotipLoading_A8_30ul_C_EV1107_200SOD_20240922.raw
+[2:50] 3254914 library precursors are potentially detectable
+[2:52] Calibrating with mass accuracies 30 (MS1), 14.609 (MS2)
+[3:03] RT window set to 0.253055
+[3:03] Recommended MS1 mass accuracy setting: 15.9359 ppm
+[3:41] Removing low confidence identifications
+[3:41] Removing interfering precursors
+[3:45] Training neural networks on 44800 PSMs
+[3:48] Number of IDs at 0.01 FDR: 12667
+[3:49] Calculating protein q-values
+WARNING: 1045 precursors were wrongly annotated in the library as proteotypic
+[3:50] Number of proteins identified at 1% FDR: 2948 (precursor-level), 2620 (protein-level) (inference performed using proteotypic peptides only)
+[3:50] Quantification
+[3:50] Quantification information saved to E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\raw\MNST_Eval_OT2EvotipLoading_A8_30ul_C_EV1107_200SOD_20240922.raw.quant
+
+[3:50] File #4/9
+[3:50] Loading run E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\raw\MNST_Eval_OT2EvotipLoading_B3_30ul_A_EV1107_200SOD_20240922.raw
+[3:58] 3254914 library precursors are potentially detectable
+[4:00] Calibrating with mass accuracies 30 (MS1), 14.609 (MS2)
+[4:11] RT window set to 0.266474
+[4:11] Recommended MS1 mass accuracy setting: 18.132 ppm
+[4:42] Removing low confidence identifications
+[4:42] Removing interfering precursors
+[4:45] Training neural networks on 48899 PSMs
+[4:48] Number of IDs at 0.01 FDR: 14256
+[4:50] Calculating protein q-values
+WARNING: 1045 precursors were wrongly annotated in the library as proteotypic
+[4:50] Number of proteins identified at 1% FDR: 3294 (precursor-level), 2905 (protein-level) (inference performed using proteotypic peptides only)
+[4:50] Quantification
+[4:50] Quantification information saved to E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\raw\MNST_Eval_OT2EvotipLoading_B3_30ul_A_EV1107_200SOD_20240922.raw.quant
+
+[4:50] File #5/9
+[4:50] Loading run E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\raw\MNST_Eval_OT2EvotipLoading_C2_30ul_B_EV1107_200SOD_20240922.raw
+[4:55] 3254914 library precursors are potentially detectable
+[4:57] Calibrating with mass accuracies 30 (MS1), 14.609 (MS2)
+[5:07] RT window set to 0.265778
+[5:07] Recommended MS1 mass accuracy setting: 19.1799 ppm
+[5:32] Removing low confidence identifications
+[5:32] Removing interfering precursors
+[5:35] Training neural networks on 51410 PSMs
+[5:38] Number of IDs at 0.01 FDR: 15643
+[5:40] Calculating protein q-values
+WARNING: 1045 precursors were wrongly annotated in the library as proteotypic
+[5:40] Number of proteins identified at 1% FDR: 3415 (precursor-level), 3165 (protein-level) (inference performed using proteotypic peptides only)
+[5:40] Quantification
+[5:40] Quantification information saved to E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\raw\MNST_Eval_OT2EvotipLoading_C2_30ul_B_EV1107_200SOD_20240922.raw.quant
+
+[5:40] File #6/9
+[5:40] Loading run E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\raw\MNST_Eval_OT2EvotipLoading_C4_30ul_C_EV1107_200SOD_20240922.raw
+[5:45] 3254914 library precursors are potentially detectable
+[5:47] Calibrating with mass accuracies 30 (MS1), 14.609 (MS2)
+[5:56] RT window set to 0.259913
+[5:56] Recommended MS1 mass accuracy setting: 15.0075 ppm
+[6:31] Removing low confidence identifications
+[6:31] Removing interfering precursors
+[6:35] Training neural networks on 46823 PSMs
+[6:38] Number of IDs at 0.01 FDR: 14065
+[6:39] Calculating protein q-values
+WARNING: 1045 precursors were wrongly annotated in the library as proteotypic
+[6:39] Number of proteins identified at 1% FDR: 3219 (precursor-level), 2822 (protein-level) (inference performed using proteotypic peptides only)
+[6:39] Quantification
+[6:40] Quantification information saved to E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\raw\MNST_Eval_OT2EvotipLoading_C4_30ul_C_EV1107_200SOD_20240922.raw.quant
+
+[6:40] File #7/9
+[6:40] Loading run E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\raw\MNST_Eval_OT2EvotipLoading_C5_30ul_A_EV1107_200SOD_20240922.raw
+[6:47] 3254914 library precursors are potentially detectable
+[6:49] Calibrating with mass accuracies 30 (MS1), 14.609 (MS2)
+[7:01] RT window set to 0.245709
+[7:01] Recommended MS1 mass accuracy setting: 17.1475 ppm
+[7:29] Removing low confidence identifications
+[7:29] Removing interfering precursors
+[7:33] Training neural networks on 47620 PSMs
+[7:37] Number of IDs at 0.01 FDR: 14958
+[7:39] Calculating protein q-values
+WARNING: 1045 precursors were wrongly annotated in the library as proteotypic
+[7:39] Number of proteins identified at 1% FDR: 3447 (precursor-level), 3004 (protein-level) (inference performed using proteotypic peptides only)
+[7:39] Quantification
+[7:40] Quantification information saved to E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\raw\MNST_Eval_OT2EvotipLoading_C5_30ul_A_EV1107_200SOD_20240922.raw.quant
+
+[7:40] File #8/9
+[7:40] Loading run E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\raw\MNST_Eval_OT2EvotipLoading_C12_30ul_B_EV1107_200SOD_20240922.raw
+[7:48] 3254914 library precursors are potentially detectable
+[7:50] Calibrating with mass accuracies 30 (MS1), 14.609 (MS2)
+[8:01] RT window set to 0.250879
+[8:01] Recommended MS1 mass accuracy setting: 18.3795 ppm
+[8:31] Removing low confidence identifications
+[8:31] Removing interfering precursors
+[8:35] Training neural networks on 48476 PSMs
+[8:38] Number of IDs at 0.01 FDR: 15116
+[8:39] Calculating protein q-values
+WARNING: 1045 precursors were wrongly annotated in the library as proteotypic
+[8:39] Number of proteins identified at 1% FDR: 3383 (precursor-level), 3052 (protein-level) (inference performed using proteotypic peptides only)
+[8:39] Quantification
+[8:40] Quantification information saved to E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\raw\MNST_Eval_OT2EvotipLoading_C12_30ul_B_EV1107_200SOD_20240922.raw.quant
+
+[8:40] File #9/9
+[8:40] Loading run E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\raw\MNST_Eval_OT2EvotipLoading_D1_30ul_C_EV1107_200SOD_20240922.raw
+[8:46] 3254914 library precursors are potentially detectable
+[8:48] Calibrating with mass accuracies 30 (MS1), 14.609 (MS2)
+[9:00] RT window set to 0.245626
+[9:00] Recommended MS1 mass accuracy setting: 18.713 ppm
+[9:27] Removing low confidence identifications
+[9:27] Removing interfering precursors
+[9:31] Training neural networks on 48149 PSMs
+[9:35] Number of IDs at 0.01 FDR: 12434
+[9:36] Calculating protein q-values
+WARNING: 1045 precursors were wrongly annotated in the library as proteotypic
+[9:36] Number of proteins identified at 1% FDR: 2878 (precursor-level), 2495 (protein-level) (inference performed using proteotypic peptides only)
+[9:36] Quantification
+[9:37] Quantification information saved to E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\raw\MNST_Eval_OT2EvotipLoading_D1_30ul_C_EV1107_200SOD_20240922.raw.quant
+
+[9:37] Cross-run analysis
+[9:37] Reading quantification information: 9 files
+[9:38] Quantifying peptides
+[9:42] Assembling protein groups
+[9:43] Quantifying proteins
+[9:43] Calculating q-values for protein and gene groups
+[9:44] Calculating global q-values for protein and gene groups
+[9:44] Protein groups with global q-value <= 0.01: 4340
+[9:45] Compressed report saved to E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\test_therapy_session\triplciate_ABC_test_report-first-pass.parquet. Use R 'arrow' or Python 'PyArrow' package to process
+[9:45] Writing report
+[9:51] Report saved to E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\test_therapy_session\triplciate_ABC_test_report-first-pass.tsv.
+[9:51] Saving precursor levels matrix
+[9:51] Precursor levels matrix (1% precursor and protein group FDR) saved to E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\test_therapy_session\triplciate_ABC_test_report-first-pass.pr_matrix.tsv.
+[9:51] Manifest saved to E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\test_therapy_session\triplciate_ABC_test_report-first-pass.manifest.txt
+[9:51] Stats report saved to E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\test_therapy_session\triplciate_ABC_test_report-first-pass.stats.tsv
+[9:51] Generating spectral library:
+[9:52] 25665 target and 256 decoy precursors saved
+[9:52] Spectral library saved to E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\test_therapy_session\triplciate_ABC_test2_report-lib.parquet
+
+[9:52] Loading spectral library E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\test_therapy_session\triplciate_ABC_test2_report-lib.parquet
+[9:53] Spectral library loaded: 5255 protein isoforms, 5100 protein groups and 25921 precursors in 22888 elution groups.
+[9:53] Initialising library
+[9:53] Saving the library to E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\test_therapy_session\triplciate_ABC_test2_report-lib.parquet.skyline.speclib
+
+
+Second pass: using the newly created spectral library to reanalyse the data
+
+[9:53] File #1/9
+[9:53] Loading run E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\raw\MNST_Eval_OT2EvotipLoading_A1_30ul_A_EV1107_200SOD_20240922.raw
+[10:00] 25665 library precursors are potentially detectable
+[10:00] Calibrating with mass accuracies 30 (MS1), 14.609 (MS2)
+[10:00] RT window set to 0.100252
+[10:00] Recommended MS1 mass accuracy setting: 17.4353 ppm
+[10:01] Removing low confidence identifications
+[10:01] Removing interfering precursors
+[10:02] Training neural networks on 30823 PSMs
+[10:03] Number of IDs at 0.01 FDR: 18723
+[10:03] No protein annotation, skipping protein q-value calculation
+[10:03] Quantification
+
+[10:03] File #2/9
+[10:03] Loading run E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\raw\MNST_Eval_OT2EvotipLoading_A4_30ul_B_EV1107_200SOD_20240922.raw
+[10:07] 25665 library precursors are potentially detectable
+[10:07] Calibrating with mass accuracies 30 (MS1), 14.609 (MS2)
+[10:07] RT window set to 0.0996812
+[10:07] Recommended MS1 mass accuracy setting: 21.3372 ppm
+[10:08] Removing low confidence identifications
+[10:08] Removing interfering precursors
+[10:08] Training neural networks on 29608 PSMs
+[10:09] Number of IDs at 0.01 FDR: 17548
+[10:09] No protein annotation, skipping protein q-value calculation
+[10:09] Quantification
+
+[10:09] File #3/9
+[10:09] Loading run E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\raw\MNST_Eval_OT2EvotipLoading_A8_30ul_C_EV1107_200SOD_20240922.raw
+[10:13] 25665 library precursors are potentially detectable
+[10:13] Calibrating with mass accuracies 30 (MS1), 14.609 (MS2)
+[10:14] RT window set to 0.100648
+[10:14] Recommended MS1 mass accuracy setting: 15.7151 ppm
+[10:15] Removing low confidence identifications
+[10:15] Removing interfering precursors
+[10:15] Training neural networks on 28944 PSMs
+[10:16] Number of IDs at 0.01 FDR: 15914
+[10:16] No protein annotation, skipping protein q-value calculation
+[10:16] Quantification
+
+[10:16] File #4/9
+[10:16] Loading run E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\raw\MNST_Eval_OT2EvotipLoading_B3_30ul_A_EV1107_200SOD_20240922.raw
+[10:20] 25665 library precursors are potentially detectable
+[10:20] Calibrating with mass accuracies 30 (MS1), 14.609 (MS2)
+[10:20] RT window set to 0.100704
+[10:20] Recommended MS1 mass accuracy setting: 18.153 ppm
+[10:21] Removing low confidence identifications
+[10:21] Removing interfering precursors
+[10:21] Training neural networks on 30521 PSMs
+[10:22] Number of IDs at 0.01 FDR: 17651
+[10:22] No protein annotation, skipping protein q-value calculation
+[10:22] Quantification
+
+[10:22] File #5/9
+[10:22] Loading run E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\raw\MNST_Eval_OT2EvotipLoading_C2_30ul_B_EV1107_200SOD_20240922.raw
+[10:27] 25665 library precursors are potentially detectable
+[10:27] Calibrating with mass accuracies 30 (MS1), 14.609 (MS2)
+[10:27] RT window set to 0.0992265
+[10:27] Recommended MS1 mass accuracy setting: 17.6194 ppm
+[10:27] Removing low confidence identifications
+[10:27] Removing interfering precursors
+[10:28] Training neural networks on 29510 PSMs
+[10:29] Number of IDs at 0.01 FDR: 17672
+[10:29] No protein annotation, skipping protein q-value calculation
+[10:29] Quantification
+
+[10:29] File #6/9
+[10:29] Loading run E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\raw\MNST_Eval_OT2EvotipLoading_C4_30ul_C_EV1107_200SOD_20240922.raw
+[10:33] 25665 library precursors are potentially detectable
+[10:33] Calibrating with mass accuracies 30 (MS1), 14.609 (MS2)
+[10:33] RT window set to 0.102424
+[10:33] Recommended MS1 mass accuracy setting: 15.7577 ppm
+[10:34] Removing low confidence identifications
+[10:34] Removing interfering precursors
+[10:34] Training neural networks on 29194 PSMs
+[10:35] Number of IDs at 0.01 FDR: 16154
+[10:35] No protein annotation, skipping protein q-value calculation
+[10:35] Quantification
+
+[10:35] File #7/9
+[10:35] Loading run E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\raw\MNST_Eval_OT2EvotipLoading_C5_30ul_A_EV1107_200SOD_20240922.raw
+[10:39] 25665 library precursors are potentially detectable
+[10:39] Calibrating with mass accuracies 30 (MS1), 14.609 (MS2)
+[10:39] RT window set to 0.101089
+[10:39] Recommended MS1 mass accuracy setting: 18.0925 ppm
+[10:40] Removing low confidence identifications
+[10:40] Removing interfering precursors
+[10:40] Training neural networks on 30601 PSMs
+[10:41] Number of IDs at 0.01 FDR: 18466
+[10:41] No protein annotation, skipping protein q-value calculation
+[10:41] Quantification
+
+[10:41] File #8/9
+[10:41] Loading run E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\raw\MNST_Eval_OT2EvotipLoading_C12_30ul_B_EV1107_200SOD_20240922.raw
+[10:46] 25665 library precursors are potentially detectable
+[10:46] Calibrating with mass accuracies 30 (MS1), 14.609 (MS2)
+[10:46] RT window set to 0.100493
+[10:46] Recommended MS1 mass accuracy setting: 18.3676 ppm
+[10:46] Removing low confidence identifications
+[10:47] Removing interfering precursors
+[10:47] Training neural networks on 29608 PSMs
+[10:48] Number of IDs at 0.01 FDR: 17638
+[10:48] No protein annotation, skipping protein q-value calculation
+[10:48] Quantification
+
+[10:48] File #9/9
+[10:48] Loading run E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\raw\MNST_Eval_OT2EvotipLoading_D1_30ul_C_EV1107_200SOD_20240922.raw
+[10:52] 25665 library precursors are potentially detectable
+[10:52] Calibrating with mass accuracies 30 (MS1), 14.609 (MS2)
+[10:52] RT window set to 0.100052
+[10:52] Recommended MS1 mass accuracy setting: 14.1458 ppm
+[10:53] Removing low confidence identifications
+[10:53] Removing interfering precursors
+[10:53] Training neural networks on 27912 PSMs
+[10:54] Number of IDs at 0.01 FDR: 15609
+[10:54] No protein annotation, skipping protein q-value calculation
+[10:54] Quantification
+
+[10:54] Cross-run analysis
+[10:54] Reading quantification information: 9 files
+[10:55] Quantifying peptides
+[11:12] Quantification parameters: 0.31613, 0.00267012, 0.000901957, 0.0121004, 0.0128014, 0.0123196, 0.0782306, 0.0518363, 0.0517594, 0.0145904, 0.0401945, 0.0241163, 0.480087, 0.0547586, 0.0798946, 0.01149
+[11:14] Quantifying proteins
+[11:14] Calculating q-values for protein and gene groups
+[11:14] Calculating global q-values for protein and gene groups
+[11:14] Protein groups with global q-value <= 0.01: 4213
+[11:15] Compressed report saved to E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\test_therapy_session\triplciate_ABC_test_report.parquet. Use R 'arrow' or Python 'PyArrow' package to process
+[11:15] Writing report
+[11:21] Report saved to E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\test_therapy_session\triplciate_ABC_test_report.tsv.
+[11:21] Saving precursor levels matrix
+[11:21] Precursor levels matrix (1% precursor and protein group FDR) saved to E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\test_therapy_session\triplciate_ABC_test_report.pr_matrix.tsv.
+[11:21] Saving protein group levels matrix
+ERROR: cannot write to E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\test_therapy_session\triplciate_ABC_test_report.pg_matrix.tsv. Check if the destination folder is write-protected or the file is in use
+[11:21] Saving gene group levels matrix
+[11:21] Gene groups levels matrix (1% precursor FDR and protein group FDR) saved to E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\test_therapy_session\triplciate_ABC_test_report.gg_matrix.tsv.
+[11:21] Saving unique genes levels matrix
+[11:21] Unique genes levels matrix (1% precursor FDR and protein group FDR) saved to E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\test_therapy_session\triplciate_ABC_test_report.unique_genes_matrix.tsv.
+[11:21] Manifest saved to E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\test_therapy_session\triplciate_ABC_test_report.manifest.txt
+[11:21] Stats report saved to E:\Data_E\David_Hall\6021_MNST_Eval_OT2EvotipLoading\test_therapy_session\triplciate_ABC_test_report.stats.tsv
+

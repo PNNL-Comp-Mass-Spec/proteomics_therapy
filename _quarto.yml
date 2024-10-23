@@ -1,0 +1,29 @@
+project:
+  type: book
+  output-dir: _report
+
+book:
+  title: "IO Group Data Analysis *TheRa.py*"
+  author: "David Hall"
+  date: "`r Sys.Date()`"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - session1.qmd
+
+bibliography: references.bib
+csl: custom-science-without-titles.csl
+reference-location: margin
+citation-location: margin
+
+format:
+  html:
+    grid: 
+      margin-width: 350px
+
+
+
+warning: false
+message: false
+error: false
+code-fold: true
