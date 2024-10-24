@@ -1,6 +1,6 @@
 # Preface {.unnumbered}
 
-This is a Quarto book containing the code and content for the Data Analysis *TheRapy* Sesssions with PNNL IO's group. See [`proteomics_therapy`](https://github.com/PNNL-Comp-Mass-Spec/proteomics_therapy) GitHub repo for version control of the project. If permitted, data is stored directly on the Repo, otherwise it'll be on DMS. This means reproducing certain sections of code will require you to be on the PNNL network. 
+This is a Quarto book containing the code and content for the Data Analysis *TheRapy* Sesssions with PNNL IO's group. See the [`proteomics_therapy`](https://github.com/PNNL-Comp-Mass-Spec/proteomics_therapy) GitHub repo for version control of the project. If permitted, data is stored directly on the Repo, otherwise it'll be on DMS. This means reproducing certain sections of code will require you to be on the PNNL network. 
 
 
 ::: {.callout-tip collapse="true"}
