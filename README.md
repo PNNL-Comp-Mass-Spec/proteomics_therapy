@@ -99,3 +99,8 @@ Once you have installed R, RStudio, and Rtools:
 1. Open RStudio.
 2. You can start writing R code in the script editor or console.
 3. Explore the various features and tools, such as the environment pane, plots, and packages pane.
+
+# Archive Notice
+
+This repository has been archived and is no longer maintained.
+The code is provided for historical reference and may contain unpatched or unknown vulnerabilities.
